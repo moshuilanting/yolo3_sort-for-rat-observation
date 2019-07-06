@@ -1,0 +1,40 @@
+{
+    "model" : {
+        "min_input_size":       288,
+        "max_input_size":       448,
+        "anchors":              [52,147, 54,80, 58,112, 71,142, 72,90, 78,110, 91,80, 99,106, 118,75],
+        "labels":               ["sit","stand","stertch","turn"]
+    },
+
+    "train": {
+        "train_image_folder":   "/home/jtl/keras-yolo3-master/data/multi/image/",
+        "train_annot_folder":   "/home/jtl/keras-yolo3-master/data/multi/annotation_only_mouse/",
+        "cache_name":           "mouse_train.pkl",
+
+        "train_times":          8,
+        "batch_size":           4,
+        "learning_rate":        1e-4,
+        "nb_epochs":            100,
+        "warmup_epochs":        3,
+        "ignore_thresh":        0.5,
+        "gpus":                 "0,1",
+
+        "grid_scales":          [1,1,1],
+        "obj_scale":            5,
+        "noobj_scale":          1,
+        "xywh_scale":           1,
+        "class_scale":          1,
+
+        "tensorboard_dir":      "logs",
+        "saved_weights_name":   "model/transfer_multi_4cl_1207.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "",
+        "valid_annot_folder":   "",
+        "cache_name":           "mouse.pkl",
+
+        "valid_times":          1
+    }
+}
