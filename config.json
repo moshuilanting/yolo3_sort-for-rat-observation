@@ -3,7 +3,7 @@
         "min_input_size":       288,
         "max_input_size":       448,
         "anchors":              [52,147, 54,80, 58,112, 71,142, 72,90, 78,110, 91,80, 99,106, 118,75],
-        "labels":               ["sit","stand","stertch","turn"]
+        "labels":               ["sit","stand","stretch","turn"]
     },
 
     "train": {
