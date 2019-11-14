@@ -13,6 +13,8 @@ sort部分 代码借鉴于 https://github.com/abewley/sort 针对跟踪丢失问
 
 模型放入 model/ 文件下(config.json中可以修改参数)
 
+训练代码：
+python3 train.py -c config.json
 
 测试代码：
 python3 predict_sort.py -c config.json -i 8.mp4 
